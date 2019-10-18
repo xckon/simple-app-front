@@ -29,7 +29,7 @@ ReactDOM.render(
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
-    redirect_uri="http://localhost:3001"
+    redirect_uri={process.env.REACT_APP_AUTH0_REDIRECT_URI}
     onRedirectCallback={onRedirectCallback}
     leeway={300}
 >
